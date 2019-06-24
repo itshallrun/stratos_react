@@ -1,3 +1,4 @@
+import "normalize.css"
 import React from 'react';
 import {BrowserRouter, Route} from "react-router-dom"
 
@@ -8,6 +9,7 @@ import Imprint from "../imprint/imprint"
 
 import Sidebar from "../navigation/sidebar"
 import {SidebarToggler} from "../navigation/sidebarToggler/sidebarToggler"
+import "./App.css"
 
 
 class App extends React.Component {
@@ -24,33 +26,37 @@ class App extends React.Component {
 
 
     render() {
-       const expanded =  this.state.expanded
+        const {expanded} = this.state
 
-        return <div>
+        return <BrowserRouter>
 
-            <BrowserRouter>
+            <nav>
+                <Sidebar onToggle={this.onToggle} expanded={this.state.expanded}/>
+            </nav>
 
-                        <nav>
-                            <Sidebar onToggle={this.onToggle} expanded={this.state.expanded}/>
-                        </nav>
+            <menu style={{
+                marginLeft: expanded ? 240 : 70,
+                transition: "margin 1s"
+            }}>
+                <SidebarToggler onToggle={this.onToggle}/>
+            </menu>
 
-                        <main style={{
-                            marginLeft: expanded? 230 : 60,
-                            transition: "margin 1s"
-                        }}>
+            <main style={{
+                marginLeft: expanded ? 240 : 70,
+                transition: "margin 1s"
+            }}>
 
-                            <SidebarToggler onToggle={this.onToggle}/>
 
-                            <Route exact path="/" component={Dashboard}/>
-                            <Route path="/dashboard" component={Dashboard}/>
-                            <Route path="/flug_kontrolle" component={FlightControl}/>
-                            <Route path="/einstellungen" component={Settings}/>
-                            <Route path="/impressum" component={Imprint}/>
+                <Route exact path="/" component={Dashboard}/>
+                <Route path="/dashboard" component={Dashboard}/>
+                <Route path="/flug_kontrolle" component={FlightControl}/>
+                <Route path="/einstellungen" component={Settings}/>
+                <Route path="/impressum" component={Imprint}/>
 
-                        </main>
+            </main>
 
-            </BrowserRouter>
-        </div>
+        </BrowserRouter>
+
     }
 }
 
