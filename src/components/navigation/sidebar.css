@@ -1,0 +1,46 @@
+.sidebar{
+    height:100%;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color:#2e4051;
+    padding-top: 10px;
+    transition: width 1s
+
+}
+
+.sidebar > a{
+    white-space: nowrap;
+    padding: 10px;
+    display: block;
+    text-decoration:none;
+    font-family: sans-serif;
+    color: white;
+}
+
+.sidebar > a > i{
+    padding: 10px;
+
+}
+
+.active{
+    border-left: solid 5px #567790;
+}
+
+.logo{
+    display: block;
+    margin: 0 auto 20px;
+    transition: all 1s
+}
+
+.logo_large{
+    width: 180px;
+    height: 180px;
+}
+
+.logo_small{
+    width: 50px;
+    height: 50px;
+}
+
