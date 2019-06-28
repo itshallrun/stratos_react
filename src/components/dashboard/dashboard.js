@@ -2,9 +2,11 @@ import React, {Component} from 'react';
 import "./dashboard.css"
 import Map from "./map/map"
 
+
 import Chart from "./chart/Chart"
 import fake from "./faker/faker"
 import LiveValues from "./liveValues/liveValues"
+
 
 class Dashboard extends Component {
     constructor(props) {
@@ -44,15 +46,15 @@ class Dashboard extends Component {
                     unit: "°C",
                     data: [[now, 28]]
                 },
-                long: {
+                lng: {
                     name: "Längengrad",
                     unit: "°",
-                    data: [[now, 49.2351]]
+                    data: [[now, 6.9739]]
                 },
                 lat: {
                     name: "Breitengrad",
                     unit: "°",
-                    data: [[now, 6.9739]]
+                    data: [[now, 49.2351]]
                 },
                 gps: {
                     name: "GPS",
@@ -73,6 +75,9 @@ class Dashboard extends Component {
                     name: "Spannung",
                     unit: "V",
                     data: [[now, 3.600]]
+                },
+                geo: {
+                    data: [{timestamp: now, lng:6.9739, lat:49.2351}]
                 }
 
             }
@@ -147,6 +152,7 @@ class Dashboard extends Component {
                 <div className="map">
 
                     <Map
+                        data={this.state.data.geo.data}
                         loadingElement={<div>loading</div>}
                         containerElement={<div style={{height: "100%", width: '100%'}}/>}
                         mapElement={<div style={{height: `100%`}}/>}

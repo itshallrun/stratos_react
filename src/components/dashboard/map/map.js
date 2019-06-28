@@ -1,10 +1,12 @@
-import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps"
+import {GoogleMap, withGoogleMap, withScriptjs, Polyline} from "react-google-maps"
 import React from "react"
 
-export default withScriptjs(withGoogleMap(() => (
-    <GoogleMap
-        defaultCenter={{lat: 40.756795, lng: -73.954298}}
-        defaultZoom={13}
 
-    />
-)));
+export default withScriptjs(withGoogleMap((props) => {
+
+    return <GoogleMap
+        defaultCenter={{lat: 49.2351, lng: 6.9739}}
+        defaultZoom={13}>
+        <Polyline path = {props.data}/>
+    </GoogleMap>
+}));

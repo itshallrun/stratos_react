@@ -24,6 +24,10 @@ class LiveValues extends React.Component {
     render() {
         return Object.keys(this.state.liveValues).map((key) => {
 
+            if(key==="geo"){
+                return ""
+            }
+
             const value = this.state.liveValues[key]
 
             return <div className="valueCard" key={key}>

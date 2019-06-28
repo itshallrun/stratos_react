@@ -4,12 +4,14 @@ export default function fake(fakeData, climbing) {
 
     let prevAlt = fakeData.alt.data.slice(-1)[0][1],
         alt = Math.round(prevAlt < 35000 && climbing
-            ? prevAlt + Math.random()*Math.floor(300)
-            : prevAlt - Math.random()*Math.floor(prevAlt > 30000 ? 1000:450))
+            ? prevAlt + Math.random() * Math.floor(300)
+            : prevAlt - Math.random() * Math.floor(prevAlt > 30000 ? 1000 : 450))
 
     const heightValues = fakeData.alt.data.map(x => x[1]);
 
-    const max = Math.max(...heightValues, alt);
+    const max = Math.max(...heightValues, alt),
+        fake_lng = +(fakeData.lng.data.slice(-1)[0][1] + 0.01).toFixed(4),
+        fake_lat = +(fakeData.lat.data.slice(-1)[0][1] + 0.01).toFixed(4)
 
     return {
         ...fakeData,
@@ -23,7 +25,7 @@ export default function fake(fakeData, climbing) {
         },
         tmp_out: {
             ...fakeData.tmp_out,
-            data: [...fakeData.tmp_out.data, [now, +(25 - fakeData.alt.data.slice(-1)[0][1]/1000*6).toFixed(2)]]
+            data: [...fakeData.tmp_out.data, [now, +(25 - fakeData.alt.data.slice(-1)[0][1] / 1000 * 6).toFixed(2)]]
         },
         tmp_in: {
             ...fakeData.tmp_in,
@@ -35,31 +37,34 @@ export default function fake(fakeData, climbing) {
         },
         volt: {
             ...fakeData.volt,
-            data: [...fakeData.volt.data, [now, +(fakeData.volt.data.slice(-1)[0][1] *(1- Math.random() / 100)).toFixed(2)]]
+            data: [...fakeData.volt.data, [now, +(fakeData.volt.data.slice(-1)[0][1] * (1 - Math.random() / 100)).toFixed(2)]]
         },
         press: {
             ...fakeData.press,
             data: [...fakeData.press.data, [now, +(1.0135 * Math.pow(1 - 6.5 * fakeData.alt.data.slice(-1)[0][1] / 288150, 5.255)).toFixed(2)]]
         },
-        long:{
-            ...fakeData.long,
-            data: [...fakeData.long.data, [now, +(fakeData.long.data.slice(-1)[0][1] + 0.01).toFixed(4)]]
+        lng: {
+            ...fakeData.lng,
+            data: [...fakeData.lng.data, [now, fake_lng]]
         },
-        lat:{
+        lat: {
             ...fakeData.lat,
-            data: [...fakeData.lat.data, [now, +(fakeData.lat.data.slice(-1)[0][1]+ 0.01).toFixed(4)]]
+            data: [...fakeData.lat.data, [now, fake_lat]]
         },
-        gps:{
+        gps: {
             ...fakeData.gps,
             data: [...fakeData.gps.data, [now, Math.random() >= 0.5]]
         },
-        max_h:{
+        max_h: {
             ...fakeData.max_h,
             data: [...fakeData.max_h.data, [now, max]]
         },
-        climb:{
+        climb: {
             ...fakeData.climb,
-            data: [...fakeData.climb.data, [now, +(alt-fakeData.alt.data.slice(-1)[0][1]).toFixed(2)]]
+            data: [...fakeData.climb.data, [now, +(alt - fakeData.alt.data.slice(-1)[0][1]).toFixed(2)]]
+        },
+        geo: {
+            data: [...fakeData.geo.data, {timestamp: now, lng: fake_lng, lat: fake_lat}]
         }
     }
 
