@@ -107,16 +107,19 @@ class Chart extends React.Component {
 
         if (this.props !== nextProps) {
 
-            //todo use .find
-
             const series = this.state.chartOptions.series
-            series[0].data = nextProps.data["alt"].data;
-            series[1].data = nextProps.data["sat"].data;
-            series[2].data = nextProps.data["tmp_out"].data;
-            series[3].data = nextProps.data["tmp_in"].data;
-            series[4].data = nextProps.data["tmp_bat"].data;
-            series[5].data = nextProps.data["volt"].data;
-            series[6].data = nextProps.data["press"].data;
+
+            for (const key of Object.keys(nextProps.data)) {
+
+                const index = series.findIndex(x => x.id === key)
+
+                if (index >= 0) {
+                    series[index].data = nextProps.data[key].data
+
+                }
+
+            }
+
 
             this.setState((state) => ({
 

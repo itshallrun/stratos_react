@@ -2,10 +2,6 @@ export default function fake(fakeData, climbing) {
 
     const now = Date.now()
 
-
-
-
-
     let prevAlt = fakeData.alt.data.slice(-1)[0][1],
         alt = Math.round(prevAlt < 35000 && climbing
             ? prevAlt + Math.random()*Math.floor(300)
