@@ -1,12 +1,25 @@
-export default function fake(fakeData) {
+export default function fake(fakeData, climbing) {
 
     const now = Date.now()
+
+
+
+
+
+    let prevAlt = fakeData.alt.data.slice(-1)[0][1],
+        alt = Math.round(prevAlt < 35000 && climbing
+            ? prevAlt + Math.random()*Math.floor(300)
+            : prevAlt - Math.random()*Math.floor(prevAlt > 30000 ? 1000:450))
+
+    const heightValues = fakeData.alt.data.map(x => x[1]);
+
+    const max = Math.max(...heightValues, alt);
 
     return {
         ...fakeData,
         alt: {
             ...fakeData.alt,
-            data: [...fakeData.alt.data, [now, Math.round(fakeData.alt.data.slice(-1)[0][1] + Math.random()*Math.floor(50))]]
+            data: [...fakeData.alt.data, [now, alt]]
         },
         sat: {
             ...fakeData.sat,
@@ -26,7 +39,7 @@ export default function fake(fakeData) {
         },
         volt: {
             ...fakeData.volt,
-            data: [...fakeData.volt.data, [now, +(fakeData.volt.data.slice(-1)[0][1]- Math.random() / 10).toFixed(2)]]
+            data: [...fakeData.volt.data, [now, +(fakeData.volt.data.slice(-1)[0][1] *(1- Math.random() / 100)).toFixed(2)]]
         },
         press: {
             ...fakeData.press,
@@ -34,11 +47,11 @@ export default function fake(fakeData) {
         },
         long:{
             ...fakeData.long,
-            data: [...fakeData.long.data, [now, +(fakeData.long.data.slice(-1)[0][1] + 0.01).toFixed(2)]]
+            data: [...fakeData.long.data, [now, +(fakeData.long.data.slice(-1)[0][1] + 0.01).toFixed(4)]]
         },
         lat:{
             ...fakeData.lat,
-            data: [...fakeData.lat.data, [now, +(fakeData.long.data.slice(-1)[0][1]+ 0.01).toFixed(2)]]
+            data: [...fakeData.lat.data, [now, +(fakeData.lat.data.slice(-1)[0][1]+ 0.01).toFixed(4)]]
         },
         gps:{
             ...fakeData.gps,
@@ -46,11 +59,11 @@ export default function fake(fakeData) {
         },
         max_h:{
             ...fakeData.max_h,
-            data: [...fakeData.max_h.data, [now, +(fakeData.tmp_out.data.slice(-1)[0][1] + 6).toFixed(2)]]
+            data: [...fakeData.max_h.data, [now, max]]
         },
         climb:{
             ...fakeData.climb,
-            data: [...fakeData.climb.data, [now, +(fakeData.alt.data.slice(-1)[0][1]-fakeData.alt.data.slice(-1)[0][1]).toFixed(2)]]
+            data: [...fakeData.climb.data, [now, +(alt-fakeData.alt.data.slice(-1)[0][1]).toFixed(2)]]
         }
     }
 

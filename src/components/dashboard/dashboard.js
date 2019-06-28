@@ -26,52 +26,52 @@ class Dashboard extends Component {
                     unit: "",
                     data: [[now, 5]]
                 },
-                tmp_out:{
+                tmp_out: {
                     name: "temp. außen",
                     unit: "°C",
                     data: [[now, 25]]
                 },
-                tmp_in:{
+                tmp_in: {
                     name: "temp. innen",
                     unit: "°C",
                     data: [[now, 26]]
                 },
-                tmp_bat:{
+                tmp_bat: {
                     name: "temp. Bat",
                     unit: "°C",
                     data: [[now, 28]]
                 },
-                volt:{
+                volt: {
                     name: "Spannung",
                     unit: "V",
                     data: [[now, 3.600]]
                 },
-                press:{
+                press: {
                     name: "Luftdruck",
                     unit: "bar",
                     data: [[now, 1.01]]
                 },
-                long:{
+                long: {
                     name: "Längengrad",
                     unit: "°",
-                    data: [[now, 1.01]]
+                    data: [[now, 49.2351]]
                 },
-                lat:{
+                lat: {
                     name: "Breitengrad",
                     unit: "°",
-                    data: [[now, 1.01]]
+                    data: [[now, 6.9739]]
                 },
-                gps:{
+                gps: {
                     name: "GPS",
                     unit: "",
                     data: [[now, true]]
                 },
-                max_h:{
+                max_h: {
                     name: "max. Höhe",
                     unit: "m",
                     data: [[now, 0]]
                 },
-                climb:{
+                climb: {
                     name: "Steigrate",
                     unit: "m/s",
                     data: [[now, 0]]
@@ -87,15 +87,28 @@ class Dashboard extends Component {
 
     componentDidMount() {
 
+        let climbing = true
+
+
         this.interval = setInterval(() => {
 
+            const fakeData = fake(this.state.fakeData, climbing)
 
-            const fakeData = fake(this.state.fakeData)
+            if (fakeData.alt.data.slice(-1)[0][1] >= 35000) {
+                climbing = false
+            }
+
+            if(fakeData.alt.data.slice(-1)[0][1] < 0 && !climbing){
+                clearInterval(this.interval);
+            }
 
 
-            this.setState({
-                fakeData: fakeData
-            })
+            if (fakeData.alt.data.slice(-1)[0][1] >= 0) {
+
+                this.setState({
+                    fakeData: fakeData
+                })
+            }
 
 
         }, this.state.fakeInterval)

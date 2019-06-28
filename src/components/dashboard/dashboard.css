@@ -19,7 +19,6 @@
 }
 
 
-/*todo*/
 .live_values {
     display: grid;
     grid-template: 20px/repeat(auto-fit, 20px);
