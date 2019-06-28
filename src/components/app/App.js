@@ -1,4 +1,4 @@
-import "normalize.css"
+import "./normalize.css"
 import React from 'react';
 import {BrowserRouter, Route} from "react-router-dom"
 
@@ -31,7 +31,8 @@ class App extends React.Component {
         return <BrowserRouter>
 
             <nav>
-                <Sidebar onToggle={this.onToggle} expanded={this.state.expanded}/>
+                <Sidebar onToggle={this.onToggle}
+                         expanded={this.state.expanded}/>
             </nav>
 
             <menu style={{
