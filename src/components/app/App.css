@@ -10,7 +10,9 @@ main {
 }
 
 menu {
-    margin: 10px;
+    z-index: 10;
+    position: absolute;
+    margin: 0;
     padding: 0
 
 }

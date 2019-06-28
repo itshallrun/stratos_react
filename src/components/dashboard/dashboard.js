@@ -15,16 +15,21 @@ class Dashboard extends Component {
         const now = Date.now()
         this.state = {
             fakeInterval: 1000,
-            fakeData: {
+            data: {
                 alt: {
                     name: "akt. Höhe",
                     unit: "m",
                     data: [[now, 0]]
                 },
-                sat: {
-                    name: "Sat",
-                    unit: "",
-                    data: [[now, 5]]
+                climb: {
+                    name: "Steigrate",
+                    unit: "m/s",
+                    data: [[now, 0]]
+                },
+                max_h: {
+                    name: "max. Höhe",
+                    unit: "m",
+                    data: [[now, 0]]
                 },
                 tmp_out: {
                     name: "temp. außen",
@@ -41,16 +46,6 @@ class Dashboard extends Component {
                     unit: "°C",
                     data: [[now, 28]]
                 },
-                volt: {
-                    name: "Spannung",
-                    unit: "V",
-                    data: [[now, 3.600]]
-                },
-                press: {
-                    name: "Luftdruck",
-                    unit: "bar",
-                    data: [[now, 1.01]]
-                },
                 long: {
                     name: "Längengrad",
                     unit: "°",
@@ -66,15 +61,20 @@ class Dashboard extends Component {
                     unit: "",
                     data: [[now, true]]
                 },
-                max_h: {
-                    name: "max. Höhe",
-                    unit: "m",
-                    data: [[now, 0]]
+                sat: {
+                    name: "Sat",
+                    unit: "",
+                    data: [[now, 5]]
                 },
-                climb: {
-                    name: "Steigrate",
-                    unit: "m/s",
-                    data: [[now, 0]]
+                press: {
+                    name: "Luftdruck",
+                    unit: "bar",
+                    data: [[now, 1.01]]
+                },
+                volt: {
+                    name: "Spannung",
+                    unit: "V",
+                    data: [[now, 3.600]]
                 }
 
             }
@@ -92,13 +92,13 @@ class Dashboard extends Component {
 
         this.interval = setInterval(() => {
 
-            const fakeData = fake(this.state.fakeData, climbing)
+            const fakeData = fake(this.state.data, climbing)
 
             if (fakeData.alt.data.slice(-1)[0][1] >= 35000) {
                 climbing = false
             }
 
-            if(fakeData.alt.data.slice(-1)[0][1] < 0 && !climbing){
+            if (fakeData.alt.data.slice(-1)[0][1] < 0 && !climbing) {
                 clearInterval(this.interval);
             }
 
@@ -106,7 +106,7 @@ class Dashboard extends Component {
             if (fakeData.alt.data.slice(-1)[0][1] >= 0) {
 
                 this.setState({
-                    fakeData: fakeData
+                    data: fakeData
                 })
             }
 
@@ -126,6 +126,26 @@ class Dashboard extends Component {
             <div className="grid-container">
 
 
+                <div className="flight_info">
+                    <p>Gestartet am: {new Date(this.state.data.alt.data[0][0]).toLocaleDateString('de-DE', {
+                        day : 'numeric',
+                        month : 'short',
+                        year : 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    })}</p>
+                    <p>Zuletzt empfangen am: {new Date(this.state.data.alt.data.slice(-1)[0][0]).toLocaleDateString('de-DE', {
+                        day : 'numeric',
+                        month : 'short',
+                        year : 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    })}</p>
+                </div>
+
+
                 <div className="map">
 
                     <Map
@@ -141,13 +161,13 @@ class Dashboard extends Component {
 
                 <div className="chart">
 
-                    <Chart data={this.state.fakeData}/>
+                    <Chart data={this.state.data}/>
 
                 </div>
 
 
                 <div className="live_values">
-                    <LiveValues data={this.state.fakeData}/>
+                    <LiveValues data={this.state.data}/>
                 </div>
             </div>
         );

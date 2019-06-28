@@ -1,11 +1,23 @@
+
 .grid-container {
     width: 100%;
     height: 100%;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas: "map chart" "live_values live_values";
+    grid-template-rows: 30px 3fr 1fr;
+    grid-template-areas: "flight_info flight_info" "map chart" "live_values live_values";
+}
+
+.flight_info{
+    grid-area: flight_info;
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.flight_info > p {
+    display: inline-block;
+    margin: auto 0 auto 60px;
 }
 
 .map {
