@@ -2,12 +2,10 @@ import React, {Component} from 'react';
 import "./dashboard.css"
 import Map from "./map/map"
 
-
 import Chart from "./chart/Chart"
 import fake from "./faker/faker"
 import LiveValues from "./liveValues/liveValues"
 
-//now change
 class Dashboard extends Component {
     constructor(props) {
         super(props)
