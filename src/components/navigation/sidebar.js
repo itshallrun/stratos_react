@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./sidebar.css"
 import {NavLink} from "react-router-dom"
-
+import logo from '../logo/logo_2016.png'
 
 class Sidebar extends Component {
 
@@ -31,7 +31,7 @@ class Sidebar extends Component {
                  style={{
                      width: expanded ? 230 : 60
                  }}>
-                <img className={"logo " + (expanded ? "logo_large" : "logo_small")} src="/logo/logo_2016.png"
+                <img className={"logo " + (expanded ? "logo_large" : "logo_small")} src={logo}
                      alt="stratos logo"/>
 
                 <NavLink to="/timeline">

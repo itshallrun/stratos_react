@@ -10,8 +10,8 @@ export default function fake(fakeData, climbing) {
     const heightValues = fakeData.alt.data.map(x => x[1]);
 
     const max = Math.max(...heightValues, alt),
-        fake_lng = +(fakeData.lng.data.slice(-1)[0][1] + 0.01).toFixed(4),
-        fake_lat = +(fakeData.lat.data.slice(-1)[0][1] + 0.01).toFixed(4)
+        fake_lng = +(fakeData.lng.data.slice(-1)[0][1] + Math.random()/1000).toFixed(4),
+        fake_lat = +(fakeData.lat.data.slice(-1)[0][1] + Math.random()/1000).toFixed(4)
 
     return {
         ...fakeData,
