@@ -55,7 +55,7 @@ class Sidebar extends Component {
                 </NavLink>
 
                 <NavLink to="/impressum">
-                    <i className="fa fa-paragraph"/>
+                    <i className="fa fa-info"/>
                     <span style={{display: expanded ? "inline-block" : "none"}}>Impressum</span>
                 </NavLink>
 
