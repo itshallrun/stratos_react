@@ -2,6 +2,7 @@ import "./normalize.css"
 import React from 'react';
 import {BrowserRouter, Route} from "react-router-dom"
 
+import Timeline from "../timeline/timeline"
 import Dashboard from "../dashboard/dashboard"
 import FlightControl from "../flight_control/flight_control"
 import Settings from "../settings/settings"
@@ -49,6 +50,7 @@ class App extends React.Component {
 
 
                 <Route exact path="/" component={Dashboard}/>
+                <Route path="/timeline" component={Timeline}/>
                 <Route path="/dashboard" component={Dashboard}/>
                 <Route path="/flug_kontrolle" component={FlightControl}/>
                 <Route path="/einstellungen" component={Settings}/>
