@@ -6,7 +6,7 @@
     left:0;
     background-color:#2e4051;
     padding-top: 10px;
-    transition: width 1s
+    transition: width .5s
 
 }
 
@@ -30,7 +30,7 @@
 .logo{
     display: block;
     margin: 0 auto 20px;
-    transition: all 1s
+    transition: all .5s
 }
 
 .logo_large{

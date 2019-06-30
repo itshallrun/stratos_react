@@ -37,14 +37,14 @@ class App extends React.Component {
 
             <menu style={{
                 marginLeft: expanded ? 240 : 70,
-                transition: "margin 1s"
+                transition: "margin .5s"
             }}>
                 <SidebarToggler expanded={expanded} onToggle={this.onToggle}/>
             </menu>
 
             <main style={{
                 marginLeft: expanded ? 240 : 70,
-                transition: "margin 1s"
+                transition: "margin .5s"
             }}>
 
 
