@@ -35,12 +35,13 @@
 - styling is based on plain JS and CSS, inspired by the inspinia theme, which was used for the original project.
 
 ## Deployment
-
 To use this APP in production you need to specify your own:
 
 - data API access
 - google maps API key
 - imprint if required
+
+Fo deployment see [Create React App - Documentation / Deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### Data API format
 (wip)
@@ -48,5 +49,5 @@ To use this APP in production you need to specify your own:
 ### Google maps API key
 set `GoogleMapsApiKey` in /src/config.js
 
-### imprint
+### Imprint
 adjust the `src/components/imprint/imprint.js`to your needs
