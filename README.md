@@ -32,7 +32,7 @@
 - [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial?hl=de)
 - [react-timeline-scribble](https://github.com/project-cemetery/react-timeline-scribble#readme)
 
-- styling is based on plain JS and CSS, inspired by the inspinia theme, which was used for the original project.
+- plain JS and CSS for styling, inspired by the original project inspinia theme
 
 ## Deployment
 To use this APP in production you need to specify your own:
@@ -43,11 +43,11 @@ To use this APP in production you need to specify your own:
 
 Fo deployment see [Create React App - Documentation / Deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### Data API format
+#### Data API format
 (wip)
 
-### Google maps API key
+#### Google maps API key
 set `GoogleMapsApiKey` in /src/config.js
 
-### Imprint
+#### Imprint
 adjust the `src/components/imprint/imprint.js`to your needs
