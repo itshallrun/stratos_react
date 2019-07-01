@@ -13,7 +13,7 @@
 
 <p align="center">
   The <b>Stratos Dashboard</b> is a webapplication for live data tracking & data visualisation <br/> of the htw saar stratos weather balloon. <br/>
-  Check out the demo version with fake data <a href="https://itshallrun.github.io/stratos_react/dashboard">here</a>
+  Check out the demo version with fake data <a href="https://itshallrun.github.io/stratos_react/">here</a>
 </p>
 
 
