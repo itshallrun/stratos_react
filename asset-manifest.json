@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/stratos_react/static/css/main.ffb7e594.chunk.css",
+    "main.js": "/stratos_react/static/js/main.95c46453.chunk.js",
+    "main.js.map": "/stratos_react/static/js/main.95c46453.chunk.js.map",
+    "runtime~main.js": "/stratos_react/static/js/runtime~main.5532e0a0.js",
+    "runtime~main.js.map": "/stratos_react/static/js/runtime~main.5532e0a0.js.map",
+    "static/js/2.67d53153.chunk.js": "/stratos_react/static/js/2.67d53153.chunk.js",
+    "static/js/2.67d53153.chunk.js.map": "/stratos_react/static/js/2.67d53153.chunk.js.map",
+    "index.html": "/stratos_react/index.html",
+    "precache-manifest.8d97046dd3e07ce39700ffb904f1160a.js": "/stratos_react/precache-manifest.8d97046dd3e07ce39700ffb904f1160a.js",
+    "service-worker.js": "/stratos_react/service-worker.js",
+    "static/css/main.ffb7e594.chunk.css.map": "/stratos_react/static/css/main.ffb7e594.chunk.css.map",
+    "static/media/logo_2016.png": "/stratos_react/static/media/logo_2016.7443f9c9.png"
+  }
+}
