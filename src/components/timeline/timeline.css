@@ -1,8 +1,9 @@
-.timeline_container{
-    padding-top:30px
-}
 
 .css-692fgp, .css-vcfpfv, .css-1b3lipl:before{
     background-color: #2e4051 !important;
+}
+
+.timeline_container{
+    color: #2e4051
 }
 

@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class FlightControl extends Component {
     render() {
         return (
-            <div>
-                FlightControl
+            <div style={{paddingTop:"5px"}}>
+                FlightControl - not available yet
             </div>
         );
     }

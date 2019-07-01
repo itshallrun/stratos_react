@@ -15,7 +15,21 @@
     padding: 10px;
     display: block;
     text-decoration:none;
-    color: white;
+    color: #a7b1c2;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity .5s linear;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+.sidebar > a.active{
+    color:  #c3d0e1
 }
 
 .sidebar > a > i{
@@ -24,8 +38,9 @@
 }
 
 .active{
-    border-left: solid 5px #567790;
+    border-left: solid 5px  #c3d0e1;
 }
+
 
 .logo{
     display: block;

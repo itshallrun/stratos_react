@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class Settings extends Component {
     render() {
         return (
-            <div>
-                Settings
+            <div style={{paddingTop:"5px"}}>
+                Settings - not available yet
             </div>
         );
     }

@@ -36,27 +36,27 @@ class Sidebar extends Component {
 
                 <NavLink to="/timeline">
                     <i className="fa fa-clock-o"/>
-                    <span style={{display: expanded ? "inline-block" : "none"}}>Timeline</span>
+                    <span className={expanded ? "visible" : "hidden"}>Timeline</span>
                 </NavLink>
 
                 <NavLink to="/dashboard">
                     <i className="fa fa-dashboard"/>
-                    <span style={{display: expanded ? "inline-block" : "none"}}>Dashboard</span>
+                    <span className={expanded ? "visible" : "hidden"}>Dashboard</span>
                 </NavLink>
 
                 <NavLink to="/flug_kontrolle">
                     <i className="fa fa-paper-plane-o"/>
-                    <span style={{display: expanded ? "inline-block" : "none"}}>Flug Kontrolle</span>
+                    <span className={expanded ? "visible" : "hidden"}>Flug Kontrolle</span>
                 </NavLink>
 
                 <NavLink to="/einstellungen">
                     <i className="fa fa-gears"/>
-                    <span style={{display: expanded ? "inline-block" : "none"}}>Einstellungen</span>
+                    <span className={expanded ? "visible" : "hidden"}>Einstellungen</span>
                 </NavLink>
 
                 <NavLink to="/impressum">
                     <i className="fa fa-info"/>
-                    <span style={{display: expanded ? "inline-block" : "none"}}>Impressum</span>
+                    <span className={expanded ? "visible" : "hidden"}>Impressum</span>
                 </NavLink>
 
 

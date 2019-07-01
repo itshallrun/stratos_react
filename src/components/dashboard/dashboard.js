@@ -154,7 +154,7 @@ class Dashboard extends Component {
 
                     <Map
                         data={this.state.data.geo.data}
-                        loadingElement={<div>loading</div>}
+                        loadingElement={<div className="loader"/>}
                         containerElement={<div style={{height: "100%", width: '100%'}}/>}
                         mapElement={<div style={{height: `100%`}}/>}
                         googleMapURL={"https://maps.googleapis.com/maps/api/js?key="+ GoogleMapsApiKey}
