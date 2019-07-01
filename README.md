@@ -1,18 +1,19 @@
-# STRATOS-REACT
+# STRATOS-DASHBOARD-REACT
+
+This project is a react rewrite of the stratos-webDashboard which is used by the htw saar stratos
+team to track the live-flight of the stratos balloon.
+
+You can see a life demo version of this project with fake data [here] (https://itshallrun.github.io/dashboard)
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is based on:
 
-#### Available Scripts
+- [REACT JS] (https://reactjs.org/)
+- [REACT ROUTER v5] (https://reacttraining.com/react-router/web/guides/quick-start)
+- [Create React App] (https://github.com/facebook/create-react-app)
+- [Highcharts] (https://www.highcharts.com/)
+- [Google Maps API] (https://developers.google.com/maps/documentation/javascript/tutorial?hl=de)
+- [react-timeline-scribble] (https://github.com/project-cemetery/react-timeline-scribble#readme)
 
-In the project directory, you can run:
+- styling is based on plain JS and CSS
 
-###### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-- create-react-app
-- react router
-- css grid, transition
