@@ -3,7 +3,7 @@
 This project is a react rewrite of the stratos-dashboard which is used by the htw saar stratos
 team to track the live data of the stratos balloon flight.
 
-For a demo version with fake data [click here] (https://itshallrun.github.io/dashboard)
+For a demo version with fake data [click here] (https://itshallrun.github.io/stratos_react/dashboard)
 
 
 ## This project is based on:
