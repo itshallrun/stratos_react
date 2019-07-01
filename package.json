@@ -2,6 +2,7 @@
   "name": "stratos_react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://itshallrun.github.io/stratos_react",
   "dependencies": {
     "highcharts": "^7.1.2",
     "highcharts-react-official": "^2.2.2",
@@ -12,7 +13,12 @@
     "react-scripts": "3.0.1",
     "react-timeline-scribble": "^1.0.14"
   },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
