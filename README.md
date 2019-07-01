@@ -7,7 +7,7 @@
 </h3>
 
 <p align="center">
-  React rewrite of the <b>Stratos Dashboard</a>
+  React rewrite of the <b>Stratos Dashboard</b>
 </p>
 
 
