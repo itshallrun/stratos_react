@@ -1,15 +1,32 @@
-# STRATOS-DASHBOARD-REACT
+<p align="center">
+    <img src="https://github.com/itshallrun/stratos_react/blob/master/src/components/logo/logo_2016.png" width="100"    height="100" margin="auto"/>
+</p>
 
-This project is a react rewrite of the stratos-dashboard which is used by the htw saar stratos
-team to track the live data of the stratos balloon flight.
+<h3 align="center">
+  Stratos Dashboard React
+</h3>
 
-For a github-pages demo version with fake data [click here](https://itshallrun.github.io/stratos_react/dashboard)
+<p align="center">
+  React rewrite of the <b>Stratos Dashboard</a>
+</p>
+
+
+<p align="center">
+  The <b>Stratos Dashboard</b> is a webapplication for live data tracking & data visualisation <br/> of the htw saar stratos weather balloon. <br/>
+  Check out the demo version with fake data <a href="https://itshallrun.github.io/stratos_react/dashboard">here</a>
+</p>
+
+
+
+
+
+
 
 
 ## This project is based on:
 
-- [REACT JS](https://reactjs.org/)
-- [REACT ROUTER v5](https://reacttraining.com/react-router/web/guides/quick-start)
+- [React](https://reactjs.org/)
+- [React Router v5](https://reacttraining.com/react-router/web/guides/quick-start)
 - [Create React App](https://github.com/facebook/create-react-app)
 - [Highcharts](https://www.highcharts.com/)
 - [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial?hl=de)
@@ -17,15 +34,15 @@ For a github-pages demo version with fake data [click here](https://itshallrun.g
 
 - styling is based on plain JS and CSS, inspired by the inspinia theme, which was used for the original project.
 
-## Before use in production
+## Deployment
 
-In order to use this APP in production you need to specify the access to your own:
+To use this APP in production you need to specify your own:
 
-- data API
+- data API access
 - google maps API key
 - imprint if required
 
-### DATA API FORMAT
+### Data API format
 (wip)
 
 ### Google maps API key
