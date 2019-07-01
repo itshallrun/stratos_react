@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "./dashboard.css"
 import Map from "./map/map"
+import {GoogleMapsApiKey} from "../../config.js"
 
 
 import Chart from "./chart/Chart"
@@ -156,7 +157,7 @@ class Dashboard extends Component {
                         loadingElement={<div>loading</div>}
                         containerElement={<div style={{height: "100%", width: '100%'}}/>}
                         mapElement={<div style={{height: `100%`}}/>}
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxq4sRNN4lmkITiXz3AGB0w1UQGV6aGJY"
+                        googleMapURL={"https://maps.googleapis.com/maps/api/js?key="+ GoogleMapsApiKey}
                     />
 
 
