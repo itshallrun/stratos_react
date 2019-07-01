@@ -23,7 +23,7 @@
 
 
 
-## This project is based on:
+## This project is based on
 
 - [React](https://reactjs.org/)
 - [React Router v5](https://reacttraining.com/react-router/web/guides/quick-start)
