@@ -1,0 +1,12 @@
+#legend{
+    position:relative;
+    bottom: 90px;
+    left: 10px;
+    border-radius: 2px;
+    width: 140px;
+    padding: 10px;
+    background: none rgb(255, 255, 255);
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px -1px;
+    overflow: hidden;
+}
