@@ -41,7 +41,7 @@ To use this APP in production you need to specify your own:
 - google maps API key
 - imprint if required
 
-Fo deployment see [Create React App - Documentation / Deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For deployment see [Create React App - Documentation / Deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 #### Data API format
 (wip)
