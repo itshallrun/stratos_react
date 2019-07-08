@@ -117,6 +117,7 @@ class Dashboard extends Component {
 
         }, this.state.fakeInterval)
 
+
     }
 
     componentWillUnmount() {
@@ -130,7 +131,7 @@ class Dashboard extends Component {
             <div className="grid-container">
 
 
-                <div className="flight_info">
+                <div className="flight_info_container">
                     <p>Gestartet am: {new Date(this.state.data.alt.data[0][0]).toLocaleDateString('de-DE', {
                         day : 'numeric',
                         month : 'short',
@@ -150,7 +151,8 @@ class Dashboard extends Component {
                 </div>
 
 
-                <div className="map">
+                <div className="map_chart_container">
+                    <div className="map">
 
                     <Map
                         data={this.state.data.geo.data}
@@ -168,6 +170,7 @@ class Dashboard extends Component {
 
                     <Chart data={this.state.data}/>
 
+                    </div>
                 </div>
 
 

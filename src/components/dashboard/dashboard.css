@@ -5,29 +5,43 @@
     height: 100%;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 30px 3fr 1fr;
-    grid-template-areas: "flight_info flight_info" "map chart" "live_values live_values";
+    grid-template-areas: "flight_info_container" "map_chart_container" "live_values";
 }
 
-.flight_info{
-    grid-area: flight_info;
+.flight_info_container{
+    grid-area: flight_info_container;
     vertical-align: middle;
     line-height: 30px;
 }
 
-.flight_info > p {
+.flight_info_container > p {
     display: inline-block;
     margin: auto 0 auto 60px;
 }
 
+.map_chart_container{
+    grid-area: map_chart_container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "map chart"
+
+}
+
 .map {
     grid-area: map;
+    height: 100%;
+    min-height: 400px;
+
 }
 
 .chart {
+    overflow: hidden;
     grid-area: chart;
-    height: 100%
+    height: 100%;
+    min-height: 400px;
 
 }
 
@@ -42,50 +56,41 @@
     grid-area: live_values;
 }
 
-.val1 {
-    grid-area: val1;
+
+@media (max-width: 1250px ){
+
+    .live_values {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
-.val2 {
-    grid-area: val2;
+@media (max-width: 850px ){
+    .map_chart_container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "map" "chart"
+    }
+
+    .grid-container{
+        grid-template-rows: 60px 3fr 1fr;
+    }
 }
 
-.val3 {
-    grid-area: val3;
+@media (max-width: 760px ){
+
+
+
+    .live_values {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
 }
 
-.val4 {
-    grid-area: val4;
-}
+@media (max-width: 650px ){
 
-.val5 {
-    grid-area: val5;
-}
-
-.val6 {
-    grid-area: val6;
-}
-
-.val7 {
-    grid-area: val7;
-}
-
-.val8 {
-    grid-area: val8;
-}
-
-.val9 {
-    grid-area: val9;
-}
-
-.val10 {
-    grid-area: val10;
-}
-
-.val11 {
-    grid-area: val11;
-}
-
-.val12 {
-    grid-area: val12;
+    .live_values {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
 }
