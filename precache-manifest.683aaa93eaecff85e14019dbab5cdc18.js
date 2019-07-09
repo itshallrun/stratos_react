@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e48ca59b2ed680fc3816a2dfff0d04f8",
+    "revision": "72691c275fc008b24d849e482a9c78b4",
     "url": "/stratos_react/index.html"
   },
   {
-    "revision": "b01ab83f39d18bc17154",
+    "revision": "a13a61cb1ab92f3fffbe",
     "url": "/stratos_react/static/css/main.512b9c4e.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stratos_react/static/js/2.eead5672.chunk.js"
   },
   {
-    "revision": "b01ab83f39d18bc17154",
-    "url": "/stratos_react/static/js/main.481cf32a.chunk.js"
+    "revision": "a13a61cb1ab92f3fffbe",
+    "url": "/stratos_react/static/js/main.559aac17.chunk.js"
   },
   {
     "revision": "3de09199be6199c807a2",
