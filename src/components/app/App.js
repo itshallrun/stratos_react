@@ -28,7 +28,7 @@ class App extends React.Component {
 
     render() {
 
-        return <HashRouter basename={process.env.PUBLIC_URL}>
+        return <HashRouter>
             <div className="wrapper">
 
                 <nav>
