@@ -1,6 +1,6 @@
 import "./normalize.css"
 import React from 'react';
-import {BrowserRouter, Route} from "react-router-dom"
+import {HashRouter, Route} from "react-router-dom"
 
 import Timeline from "../timeline/timeline"
 import Dashboard from "../dashboard/dashboard"
@@ -28,7 +28,7 @@ class App extends React.Component {
 
     render() {
 
-        return <BrowserRouter basename={process.env.PUBLIC_URL}>
+        return <HashRouter basename={process.env.PUBLIC_URL}>
             <div className="wrapper">
 
                 <nav>
@@ -52,7 +52,7 @@ class App extends React.Component {
                 </main>
             </div>
 
-        </BrowserRouter>
+        </HashRouter>
 
     }
 }
