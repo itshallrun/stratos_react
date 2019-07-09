@@ -16,7 +16,7 @@ import "./App.css"
 class App extends React.Component {
 
     state = {
-        expanded: true
+        expanded: false
     };
 
     onToggle = () => {
@@ -27,36 +27,30 @@ class App extends React.Component {
 
 
     render() {
-        const {expanded} = this.state
 
         return <BrowserRouter>
+            <div className="wrapper">
 
-            <nav>
-                <Sidebar onToggle={this.onToggle}
-                         expanded={this.state.expanded}/>
-            </nav>
+                <nav>
+                    <Sidebar onToggle={this.onToggle}
+                             expanded={this.state.expanded}/>
+                </nav>
 
-            <menu style={{
-                marginLeft: expanded ? 240 : 70,
-                transition: "margin .5s"
-            }}>
-                <SidebarToggler expanded={expanded} onToggle={this.onToggle}/>
-            </menu>
+                <main>
 
-            <main style={{
-                marginLeft: expanded ? 240 : 70,
-                transition: "margin .5s"
-            }}>
+                    <menu>
+                        <SidebarToggler expanded={this.state.expanded} onToggle={this.onToggle}/>
+                    </menu>
 
+                    <Route exact path="/" component={Dashboard}/>
+                    <Route path="/timeline" component={Timeline}/>
+                    <Route path="/dashboard" component={Dashboard}/>
+                    <Route path="/flug_kontrolle" component={FlightControl}/>
+                    <Route path="/einstellungen" component={Settings}/>
+                    <Route path="/impressum" component={Imprint}/>
 
-                <Route exact path="/" component={Dashboard}/>
-                <Route path="/timeline" component={Timeline}/>
-                <Route path="/dashboard" component={Dashboard}/>
-                <Route path="/flug_kontrolle" component={FlightControl}/>
-                <Route path="/einstellungen" component={Settings}/>
-                <Route path="/impressum" component={Imprint}/>
-
-            </main>
+                </main>
+            </div>
 
         </BrowserRouter>
 
