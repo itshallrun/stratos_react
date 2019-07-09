@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/stratos_react/static/css/main.defd231d.chunk.css",
-    "main.js": "/stratos_react/static/js/main.6395e760.chunk.js",
-    "main.js.map": "/stratos_react/static/js/main.6395e760.chunk.js.map",
+    "main.css": "/stratos_react/static/css/main.512b9c4e.chunk.css",
+    "main.js": "/stratos_react/static/js/main.481cf32a.chunk.js",
+    "main.js.map": "/stratos_react/static/js/main.481cf32a.chunk.js.map",
     "runtime~main.js": "/stratos_react/static/js/runtime~main.5532e0a0.js",
     "runtime~main.js.map": "/stratos_react/static/js/runtime~main.5532e0a0.js.map",
-    "static/js/2.2abd73ec.chunk.js": "/stratos_react/static/js/2.2abd73ec.chunk.js",
-    "static/js/2.2abd73ec.chunk.js.map": "/stratos_react/static/js/2.2abd73ec.chunk.js.map",
+    "static/js/2.eead5672.chunk.js": "/stratos_react/static/js/2.eead5672.chunk.js",
+    "static/js/2.eead5672.chunk.js.map": "/stratos_react/static/js/2.eead5672.chunk.js.map",
     "index.html": "/stratos_react/index.html",
-    "precache-manifest.69e4d3cd74d1e69c6067ca4673242149.js": "/stratos_react/precache-manifest.69e4d3cd74d1e69c6067ca4673242149.js",
+    "precache-manifest.f38c6c464a105d1602d9f05b9d749727.js": "/stratos_react/precache-manifest.f38c6c464a105d1602d9f05b9d749727.js",
     "service-worker.js": "/stratos_react/service-worker.js",
-    "static/css/main.defd231d.chunk.css.map": "/stratos_react/static/css/main.defd231d.chunk.css.map",
+    "static/css/main.512b9c4e.chunk.css.map": "/stratos_react/static/css/main.512b9c4e.chunk.css.map",
     "static/media/logo_2016.png": "/stratos_react/static/media/logo_2016.7443f9c9.png"
   }
 }

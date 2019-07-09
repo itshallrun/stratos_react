@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/stratos_react/precache-manifest.69e4d3cd74d1e69c6067ca4673242149.js"
+  "/stratos_react/precache-manifest.f38c6c464a105d1602d9f05b9d749727.js"
 );
 
 self.addEventListener('message', (event) => {
