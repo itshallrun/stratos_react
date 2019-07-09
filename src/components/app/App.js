@@ -28,7 +28,7 @@ class App extends React.Component {
 
     render() {
 
-        return <BrowserRouter>
+        return <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className="wrapper">
 
                 <nav>
