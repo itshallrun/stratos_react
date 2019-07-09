@@ -88,6 +88,9 @@
 }
 
 @media (max-width: 650px ){
+    .flight_info_container{
+        font-size: 0.8em;
+    }
 
     .live_values {
         grid-template-columns: 1fr 1fr;

@@ -1,9 +1,6 @@
 .sidebar{
-    height:100%;
-    position: fixed;
-    z-index: 1;
-    top:0;
-    left:0;
+    width:60px;
+    height:100vh;
     background-color:#2e4051;
     padding-top: 10px;
     transition: width .5s
@@ -16,6 +13,14 @@
     display: block;
     text-decoration:none;
     color: #a7b1c2;
+}
+
+.nav_expanded{
+    width:240px
+
+}
+.nav_contracted{
+    width:60px
 }
 
 .visible {
@@ -56,5 +61,29 @@
 .logo_small{
     width: 50px;
     height: 50px;
+}
+
+
+@media(max-width: 650px){
+    .nav_expanded{
+        width:60px;
+        margin-left:0;
+        transition: margin .5s
+
+    }
+    .nav_contracted{
+        margin-left:-60px;
+        transition: margin .5s
+    }
+
+    .logo_large{
+        width: 50px;
+        height: 50px;
+    }
+
+    .sidebar > a > span{
+        visibility: hidden;
+    }
+
 }
 

@@ -22,8 +22,8 @@ menu {
 .loader {
     position: relative;
     top:50%;
-    border: 5px solid #f3f3f3; /* Light grey */
-    border-top: 5px solid #253545; /* Blue */
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #253545;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -34,4 +34,18 @@ menu {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.wrapper{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "nav main";
+}
+
+nav{
+    grid-area: nav ;
+}
+
+main{
+    grid-area: main;
 }
